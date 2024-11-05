@@ -1,0 +1,50 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil de Usuario</title>
+    <link rel="stylesheet" href="{% static 'img\foto_perfil_neutro.css'%}">
+    <link rel="stylesheet" href="{% static 'css/mi_perfil.css' %}">
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+
+    <div class="contenedor_titulo">
+        <img class="imglogo" src="/static/img\logonutri.jpeg" alt="logo">
+    </div>
+
+<body>
+
+    {% include 'layouts/partials/nav.html' %}
+
+
+    <section class="seccion-perfil-usuario">
+        <header class="perfil-usuario-header">
+            <div class="perfil-usuario-portada"></div>
+            <div class="perfil-usuario-avatar">
+                <img src="{% static 'img\foto_perfil_neutro.jpg' %}" class="imagen_avatar" alt="Avatar de Usuario">
+            </div>
+        </header>
+        <div class="perfil-usuario-bio">
+            <h3 class="titulo">
+                {{ user.username }}</h3>
+        </div>
+        <div class="perfil-usuario-footer">
+            <ul class="listas-datos">
+
+                
+            </ul>
+        </div>
+        <div>
+            <a href="#" class="boton-redes facebook"><i class="icon-facebook"></i></a>
+            <a href="#" class="boton-redes twitter"><i class="icon-twitter"></i></a>
+            <a href="#" class="boton-redes instagram"><i class="icon-instagram"></i></a>
+        </div>
+    </section>
+    <div class="cerrar-sesion-contenedor">
+        <button class="btn-cerrar-sesion">Cerrar Sesión</button>
+    </div>
+    
+</body>
+</html>

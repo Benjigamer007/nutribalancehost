@@ -1,0 +1,91 @@
+@font-face {
+    font-family: 'Fuente1';
+    src: url(../Fuentes/fuente1.ttf);
+}
+
+@font-face {
+    font-family: 'Fuente2';
+    src: url(../Fuentes/fuente2.ttf);
+}
+
+
+
+
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #c4dd71;
+    padding: 20px;
+    font-family: "Barlow Semi Condensed", sans-serif;
+    font-weight: 700;
+    background-image: url('../img/consultaimg.png'); /* Cambia esto por la URL de tu imagen */
+    background-size: cover; /* Cubre toda la pantalla */
+    background-position: center; /* Centra la imagen */
+    background-repeat: no-repeat;
+    min-height: 100vh; /* Ocupa el 100% de la altura de la pantalla */
+}
+
+main {
+
+    height: 40vh;
+}
+.form-container {
+    background:#f2ffc9;
+    padding: 5%;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 30%;
+    margin: auto;
+    margin-top: 7%;
+    margin-bottom: 7%
+
+
+}
+
+
+h2 {
+    text-align: center;
+    color: #455913;
+}
+
+label {
+    margin-top: 10px;
+    display: block;
+    color:#455913;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #aab686;
+    border-radius: 5px;
+    background-color: #f6ffda;
+    resize: none;
+}
+
+.button-container {
+    display: flex;          /* Usar flexbox */
+    justify-content: center; /* Centrar el contenido */
+    margin-top: 10px;
+}
+
+button {
+    background-color: #455913;
+    color: white;
+    border: none;
+    border-radius: 10%;
+    padding: 3%;
+    font-size: 120%;
+    margin-top: 2%;
+    cursor: pointer;
+    justify-content: center;
+    align-items: center;
+    font-family: 'fuente1', sans-serif;
+    width: 200px;
+}
+
+button:hover {
+    background-color: #6f9b00;
+    transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+}
