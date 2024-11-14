@@ -1,0 +1,21 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editar Perfil</title>
+    <link rel="stylesheet" href="{% static 'css/mi_perfil.css' %}">
+</head>
+<body>
+
+    <h2>Editar Datos</h2>
+    <form method="POST">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Guardar Cambios</button>
+    </form>
+
+    <a href="{% url 'miperfil' %}">Volver al perfil</a>
+</body>
+</html>

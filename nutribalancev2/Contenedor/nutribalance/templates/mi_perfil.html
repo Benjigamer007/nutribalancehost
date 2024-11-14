@@ -1,0 +1,51 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil de Usuario</title>
+    <link rel="stylesheet" href="{% static 'css/mi_perfil.css' %}">
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    {% include "layouts/partials/nav.html" %}
+
+    <section class="seccion-perfil-usuario">
+        <header class="perfil-usuario-header">
+            <div class="perfil-usuario-portada"></div>
+            <div class="perfil-usuario-avatar">
+                <img src="{% static 'img/foto_perfil_neutro.jpg' %}" class="imagen_avatar" alt="Avatar de Usuario">
+            </div>
+        </header>
+        
+        <div class="perfil-usuario-bio">
+            <!-- Muestra el nombre y apellido del paciente -->
+            <h3 class="titulo">{{ paciente.nombre }} {{ paciente.apellido }}</h3>
+        </div>
+        
+        <div class="perfil-usuario-footer">
+    <ul>
+        <li><strong>Email:</strong> {{ paciente.email }}</li>
+        <li><strong>Edad:</strong> {{ paciente.edad }} años</li>
+        <li><strong>Peso:</strong> {{ paciente.peso }} kg</li>
+        <li><strong>Altura:</strong> {{ paciente.altura }} cm</li>
+    </ul>
+
+</div>
+    </section>
+
+    <div class="editar_perfil">
+        <a href="{% url 'editar_perfil' paciente.id %}" class="btn-editar-perfil">Editar Perfil</a>
+    </div>
+    
+    <div class="cerrar-sesion-contenedor">
+        <form action="{% url 'logout' %}" method="POST">
+            {% csrf_token %}
+            <button type="submit" class="btn-cerrar-sesion">Cerrar Sesión</button>
+        </form>
+    </div>
+    
+</body>
+</html>
